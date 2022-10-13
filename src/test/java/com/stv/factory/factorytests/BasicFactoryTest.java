@@ -23,6 +23,7 @@ public class BasicFactoryTest {
         driver.manage().window().maximize();
     }
 
+
     @AfterClass
     public void afterClass() throws Exception {
         getDriver().quit();

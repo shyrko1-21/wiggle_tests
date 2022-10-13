@@ -23,7 +23,6 @@ public class LoginPage extends FactoryPage {
     @FindBy(id="forgotten-password")
     private WebElement forgottenPasswordLink;
 
-
     public boolean isLoginContainerDisplayed(){
         return loginContainer.isDisplayed();
     }
