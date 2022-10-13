@@ -33,12 +33,17 @@ public class LoginPage extends FactoryPage {
     }
 
     public void enterEmail(String email) {
+        emailAddress.clear();
         emailAddress.sendKeys(email);
         emailAddress.sendKeys(Keys.RETURN);
     }
 
     public String getEmailValidationMessage() {
-        return emailValidationMessage.getText();
+        try {
+            return emailValidationMessage.getText();
+        } catch (Exception e) {
+            return "";
+        }
     }
 
     public boolean isPasswordFormDisplayed() {
@@ -54,10 +59,14 @@ public class LoginPage extends FactoryPage {
     }
 
     public void clickOnPasswordCheckbox() {
+        if (passwordCheckBox.isSelected()) {
+            passwordCheckBox.click();
+        }
         passwordCheckBox.click();
     }
 
     public void enterPassword(String ps) {
+        password.clear();
         password.sendKeys(ps);
     }
 
