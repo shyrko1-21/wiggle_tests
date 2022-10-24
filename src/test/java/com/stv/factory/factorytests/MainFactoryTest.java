@@ -36,7 +36,7 @@ public class MainFactoryTest extends BasicFactoryTest {
     }
 
     @Test (description = "Assert the login page is loaded", dependsOnMethods = "assertAccountIconIsDisplayed")
-    public void assertLoginPageOpened() {
+    public void assertLoginPageOpened() throws Exception {
         mainFactoryPage.clickOnTrustButton();
         mainFactoryPage.clickOnAccountLink();
         Assert.assertEquals(new LoginPage().isLoginContainerDisplayed(), true, "Login page isn't loaded properly");

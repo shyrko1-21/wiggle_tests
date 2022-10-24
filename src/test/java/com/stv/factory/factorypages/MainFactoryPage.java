@@ -19,7 +19,7 @@ public class MainFactoryPage extends FactoryPage {
         accountLink.click();
     }
 
-    public void clickOnTrustButton(){
+    public void clickOnTrustButton() throws Exception{
         trustButton.click();
     }
 
