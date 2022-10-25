@@ -1,12 +1,18 @@
 package com.stv.factory.factorypages;
 
+import com.stv.framework.core.drivers.Driver;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
 public class MainFactoryPage extends FactoryPage {
 
     @FindBy(id = "accountLink")
     private WebElement accountLink;
+
+    @FindBy(id = "Banner1")
+    private WebElement shopNow;
 
     @FindBy(xpath = "//button[contains(text(),'Accept All Cookies')]")
     private WebElement trustButton;
@@ -19,8 +25,16 @@ public class MainFactoryPage extends FactoryPage {
         accountLink.click();
     }
 
-    public void clickOnTrustButton() throws Exception{
+    public void clickOnTrustButton(){
         trustButton.click();
+    }
+
+    public void scrollDownToCategory() {
+        ((JavascriptExecutor)Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", shopNow);
+    }
+
+    public void clickOnShopNowButton(){
+        shopNow.click();
     }
 
 
