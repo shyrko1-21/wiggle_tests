@@ -2,12 +2,13 @@ package com.stv.bdd.steps;
 
 import com.stv.factory.factorypages.LoginPage;
 import com.stv.factory.factorypages.MainFactoryPage;
+import com.stv.factory.factorytests.BasicFactoryTest;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.Assert;
 
-public class EmailFormSteps extends BasicBddTest {
+public class EmailFormSteps extends BasicFactoryTest {
     private MainFactoryPage mainFactoryPage = new MainFactoryPage();
     private LoginPage loginPage = new LoginPage();
 
@@ -25,10 +26,10 @@ public class EmailFormSteps extends BasicBddTest {
     }
 
     @Then("Account page is opened")
-    public void accountPageOpened() {
+    public void accountPageOpened() throws Exception {
         boolean actualResult = loginPage.isLoginContainerDisplayed();
         Assert.assertTrue(actualResult, "Login page isn't loaded properly");
-        quit();
+        afterClass();
     }
 
     @Given("Login page is opened")

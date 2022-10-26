@@ -1,14 +1,14 @@
 package com.stv.individual.steps;
 
-import com.stv.bdd.steps.BasicBddTest;
 import com.stv.factory.factorypages.*;
+import com.stv.factory.factorytests.BasicFactoryTest;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.Assert;
 
-public class MainFeatureSteps extends BasicBddTest {
+public class MainFeatureSteps extends BasicFactoryTest {
     private int qtyFromBasketPopupPage;
     private MainFactoryPage mainFactoryPage = new MainFactoryPage();
     private LoginPage loginPage = new LoginPage();
