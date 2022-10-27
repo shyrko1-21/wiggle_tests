@@ -11,23 +11,23 @@ public class LoginPage extends FactoryPage {
     @FindBy(id = "LogOnModel_UserName-error")
     private WebElement emailValidationMessage;
 
-    @FindBy(id="LogOnModel_UserName")
+    @FindBy(id = "LogOnModel_UserName")
     private WebElement emailAddress;
 
-    @FindBy(id="LogOnModel_Password")
+    @FindBy(id = "LogOnModel_Password")
     private WebElement password;
 
-    @FindBy(id="passwordToggle")
+    @FindBy(id = "passwordToggle")
     private WebElement passwordCheckBox;
 
-    @FindBy(id="forgotten-password")
+    @FindBy(id = "forgotten-password")
     private WebElement forgottenPasswordLink;
 
-    public boolean isLoginContainerDisplayed(){
+    public boolean isLoginContainerDisplayed() {
         return loginContainer.isDisplayed();
     }
 
-    public boolean isEmailFormDisplayed(){
+    public boolean isEmailFormDisplayed() {
         return emailAddress.isDisplayed();
     }
 

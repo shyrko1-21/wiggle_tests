@@ -1,5 +1,5 @@
 Feature: Main feature
-  Scenario: Sc1
+  Scenario: Verify basket functionality
     Given Main page is opened
     When A user scrolls down to a category
     And Clicks on the Shop now button

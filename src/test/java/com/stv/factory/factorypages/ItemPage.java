@@ -3,7 +3,7 @@ package com.stv.factory.factorypages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class ItemPage extends FactoryPage{
+public class ItemPage extends FactoryPage {
     @FindBy(id = "productTitle")
     private WebElement productTitle;
 
@@ -16,7 +16,7 @@ public class ItemPage extends FactoryPage{
     @FindBy(id = "quickBuyButton")
     private WebElement addToBasketButton;
 
-    public boolean isItemPageDisplayed(){
+    public boolean isItemPageDisplayed() {
         return productTitle.isDisplayed();
     }
 

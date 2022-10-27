@@ -4,8 +4,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class RecoverPasswordPage extends FactoryPage{
-
-
     @FindBy(id = "recover-password")
     private WebElement recoverPasswordContainer;
 

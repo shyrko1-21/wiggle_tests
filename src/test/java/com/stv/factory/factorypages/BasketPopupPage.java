@@ -3,7 +3,7 @@ package com.stv.factory.factorypages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class BasketPopupPage extends FactoryPage{
+public class BasketPopupPage extends FactoryPage {
     @FindBy(className = "bem-add-to-basket-popup-header")
     private WebElement basketPopupHeader;
 
@@ -13,7 +13,7 @@ public class BasketPopupPage extends FactoryPage{
     @FindBy(xpath = "(//p[@class='bem-add-to-basket-popup-detail bem-add-to-basket-popup-detail--qty'])[1]")
     private WebElement qtyBlock;
 
-    public boolean isBasketPopupPageDisplayed(){
+    public boolean isBasketPopupPageDisplayed() {
         return basketPopupHeader.isDisplayed();
     }
 
@@ -23,7 +23,7 @@ public class BasketPopupPage extends FactoryPage{
 
     public int getQuantity() {
         String qtyTextBlock = qtyBlock.getText();
-        String qtyText = qtyTextBlock.substring(qtyTextBlock.indexOf(" ")+1);
+        String qtyText = qtyTextBlock.substring(qtyTextBlock.indexOf(" ") + 1);
         return Integer.parseInt(qtyText);
     }
 }

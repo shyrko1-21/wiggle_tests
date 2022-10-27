@@ -16,8 +16,7 @@ public class EmailFormSteps extends BasicFactoryTest {
     public void mainPageOpened() throws Exception{
         setUp();
         mainFactoryPage.clickOnTrustButton();
-        boolean actualResult = mainFactoryPage.isAccountLinkDisplayed();
-        Assert.assertTrue(actualResult, "Account link isn't visible");
+        Assert.assertTrue(mainFactoryPage.isAccountLinkDisplayed(), "Account link isn't visible");
     }
 
     @When("A user clicks on Your account button")

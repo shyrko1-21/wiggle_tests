@@ -7,7 +7,6 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
 public class MainFactoryPage extends FactoryPage {
-
     @FindBy(id = "accountLink")
     private WebElement accountLink;
 
@@ -17,23 +16,23 @@ public class MainFactoryPage extends FactoryPage {
     @FindBy(xpath = "//button[contains(text(),'Accept All Cookies')]")
     private WebElement trustButton;
 
-    public boolean isAccountLinkDisplayed(){
+    public boolean isAccountLinkDisplayed() {
         return accountLink.isDisplayed();
     }
 
-    public void clickOnAccountLink(){
+    public void clickOnAccountLink() {
         accountLink.click();
     }
 
-    public void clickOnTrustButton(){
+    public void clickOnTrustButton() {
         trustButton.click();
     }
 
     public void scrollDownToCategory() {
-        ((JavascriptExecutor)Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", shopNow);
+        ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", shopNow);
     }
 
-    public void clickOnShopNowButton(){
+    public void clickOnShopNowButton() {
         shopNow.click();
     }
 

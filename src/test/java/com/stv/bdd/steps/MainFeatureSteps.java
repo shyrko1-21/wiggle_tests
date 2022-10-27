@@ -1,4 +1,4 @@
-package com.stv.individual.steps;
+package com.stv.bdd.steps;
 
 import com.stv.factory.factorypages.*;
 import com.stv.factory.factorytests.BasicFactoryTest;
@@ -54,8 +54,7 @@ public class MainFeatureSteps extends BasicFactoryTest {
 
     @Then("Item page is opened")
     public void ItemPageOpened() {
-        boolean actualResult = itemPage.isItemPageDisplayed();
-        Assert.assertTrue(actualResult);
+        Assert.assertTrue(itemPage.isItemPageDisplayed());
     }
 
     @When("A user selects a size")
@@ -71,8 +70,7 @@ public class MainFeatureSteps extends BasicFactoryTest {
     @Then("Basket pop-up page appears")
     public void basketPopupPageOpened() {
         qtyFromBasketPopupPage = basketPopupPage.getQuantity();
-        boolean actualResult = basketPopupPage.isBasketPopupPageDisplayed();
-        Assert.assertTrue(actualResult);
+        Assert.assertTrue(basketPopupPage.isBasketPopupPageDisplayed());
     }
 
     @When("A user clicks on View full basket link")
@@ -82,8 +80,7 @@ public class MainFeatureSteps extends BasicFactoryTest {
 
     @Then("Basket page is opened")
     public void basketPageOpened() {
-        boolean actualResult = basketPage.isBasketPageDisplayed();
-        Assert.assertTrue(actualResult);
+        Assert.assertTrue(basketPage.isBasketPageDisplayed());
     }
 
     @And("Quantity is not changed")
@@ -98,8 +95,7 @@ public class MainFeatureSteps extends BasicFactoryTest {
 
     @Then("Login page is opened")
     public void loginPageOpened() {
-        boolean actualResult = loginPage.isLoginContainerDisplayed();
-        Assert.assertTrue(actualResult, "Login page isn't loaded properly");
+        Assert.assertTrue(loginPage.isLoginContainerDisplayed(), "Login page isn't loaded properly");
     }
 
     @When("A user clicks on the Forgotten password button")
@@ -109,7 +105,6 @@ public class MainFeatureSteps extends BasicFactoryTest {
 
     @Then("Forgotten password page is opened")
     public void forgottenPasswordPageOpened() {
-        boolean actualResult = forgottenPasswordPage.isForgottenPasswordPageDisplayed();
-        Assert.assertTrue(actualResult);
+        Assert.assertTrue(forgottenPasswordPage.isForgottenPasswordPageDisplayed());
     }
 }
