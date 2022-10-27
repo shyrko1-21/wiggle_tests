@@ -9,6 +9,7 @@ import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
 import static com.stv.framework.core.lib.WigglePageURLs.START_URL;
+import static com.stv.framework.core.lib.WigglePageURLs.START_URL_US;
 
 public class BasicFactoryTest {
     public static WebDriver getDriver() {
@@ -18,7 +19,7 @@ public class BasicFactoryTest {
     @BeforeClass(description = "Start browser")
     public void setUp() {
         WebDriver driver = getDriver();
-        driver.get(START_URL);
+        driver.get(START_URL_US);
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.manage().window().maximize();
     }

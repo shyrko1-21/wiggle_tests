@@ -18,14 +18,6 @@ public class MainFeatureSteps extends BasicFactoryTest {
     private BasketPage basketPage = new BasketPage();
     private ForgottenPasswordPage forgottenPasswordPage = new ForgottenPasswordPage();
 
-    @Given("Main page is opened")
-    public void mainPageOpened() throws Exception {
-        setUp();
-        mainFactoryPage.clickOnTrustButton();
-        boolean actualResult = mainFactoryPage.isAccountLinkDisplayed();
-        Assert.assertTrue(actualResult, "Account link isn't visible");
-    }
-
     @When("A user scrolls down to a category")
     public void scrollDownToCategory() {
         mainFactoryPage.scrollDownToCategory();
@@ -91,11 +83,6 @@ public class MainFeatureSteps extends BasicFactoryTest {
     @When("A user clicks on the Continue to checkout button")
     public void clickOnContinueToCheckoutButton() {
         basketPage.clickOnContinueToCheckoutButton();
-    }
-
-    @Then("Login page is opened")
-    public void loginPageOpened() {
-        Assert.assertTrue(loginPage.isLoginContainerDisplayed(), "Login page isn't loaded properly");
     }
 
     @When("A user clicks on the Forgotten password button")
