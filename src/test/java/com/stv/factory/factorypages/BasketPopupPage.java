@@ -10,7 +10,7 @@ public class BasketPopupPage extends FactoryPage {
     @FindBy(id = "view-basket")
     private WebElement viewFullBasketLink;
 
-    @FindBy(xpath = "(//p[@class='bem-add-to-basket-popup-detail bem-add-to-basket-popup-detail--qty'])[1]")
+    @FindBy(xpath = "//div[@class='bem-add-to-basket-popup-item js-basket-popup-item']//p[contains(text(),'Qty')]")
     private WebElement qtyBlock;
 
     public boolean isBasketPopupPageDisplayed() {

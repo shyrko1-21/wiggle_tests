@@ -1,4 +1,4 @@
-Feature: Check email form functionality
+Feature: Check email form functionality feature
   Scenario: 01. Load login page
     Given Main page is opened
     When A user clicks on Your account button
