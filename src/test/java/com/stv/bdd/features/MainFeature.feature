@@ -1,4 +1,4 @@
-Feature: Main feature
+Feature: Main Feature
   Scenario: Verify basket functionality
     Given Main page is opened
     When A user scrolls down to a category
